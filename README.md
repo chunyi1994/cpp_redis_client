@@ -4,9 +4,13 @@
 
 于是我借鉴了python版的redis接口,以及leveldb的接口,写了符合我的胃口的c++版本的redis client
 
-所有命令都可以通过command函数执行,我还写了一些常用简便命令(持续更新)
+所有命令都可以通过command函数执行(通过构造一个string命令),
 
-RedisStatus connect(const string&ip, size_t port);
+我还写了一些常用简便命令(持续更新)
+
+
+    RedisStatus connect(const string&ip, size_t port);
+
     RedisStatus commond(const string& cmd);
 
     RedisStatus set(const string& key, const string& value);
